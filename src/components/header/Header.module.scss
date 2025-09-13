@@ -1,0 +1,23 @@
+@use "@/styles" as *;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: $background-color;
+
+  &__logo {
+    img {
+      height: 68px;
+      width: auto;
+    }
+    @include mobile {
+      img {
+        height: 47px;
+      }
+    }
+  }
+}

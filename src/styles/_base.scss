@@ -1,0 +1,90 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+// Styles de base
+:root {
+  font-family: $font-family;
+  line-height: $line-height-base;
+  font-weight: $font-weight-normal;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $background-color-dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Styles pour les liens
+a {
+  @include link-base;
+  color: #646cff;
+
+  &:hover {
+    color: #535bf2;
+  }
+}
+
+// Styles pour le body
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+// Styles pour le conteneur principal
+#root {
+  margin: 0 auto;
+  padding: $spacing-xxl $spacing-xxxl;
+  text-align: center;
+
+  @include mobile {
+    padding: $spacing-lg $spacing-xl;
+  }
+}
+
+// Styles pour les titres
+h1 {
+  font-size: $font-size-xl;
+  line-height: $line-height-large;
+}
+
+// Styles pour les boutons
+button {
+  @include button-base;
+  background-color: #1a1a1a;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+// Styles pour les listes
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+// Media queries pour le mode clair
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: $background-color;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}

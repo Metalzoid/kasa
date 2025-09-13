@@ -1,0 +1,38 @@
+@use "@/styles" as *;
+
+.navigation {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: $spacing-nav;
+    @include mobile {
+      gap: $spacing-lg;
+    }
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      font-family: $font-family;
+      text-decoration: none;
+      color: $text-color;
+      font-size: $font-size-large;
+      font-weight: $font-weight-medium;
+      letter-spacing: $spacing-sm;
+      line-height: $line-height-nav;
+      text-wrap: nowrap;
+
+      &.active {
+        text-decoration: underline;
+        text-underline-offset: $spacing-md;
+        text-decoration-thickness: $spacing-sm;
+      }
+
+      @include mobile {
+        font-size: $font-size-small;
+        letter-spacing: $spacing-xs;
+      }
+    }
+  }
+}

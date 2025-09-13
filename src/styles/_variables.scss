@@ -1,0 +1,39 @@
+// Variables de couleurs
+$primary-color: #ff6060 !default;
+$secondary-color: #f6f6f6 !default;
+$text-color: #000000 !default;
+$text-color-light: #ffffff !default;
+$background-color: #ffffff !default;
+$background-color-dark: #242424 !default;
+
+// Variables de typographie
+$font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif !default;
+$font-size-base: 16px !default;
+$font-size-small: 12px !default;
+$font-size-large: 24px !default;
+$font-size-xl: 3.2em !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$line-height-base: 1.5 !default;
+$line-height-large: 1.1 !default;
+$line-height-nav: 143% !default;
+
+// Variables d'espacement
+$spacing-xs: 0.5px !default;
+$spacing-sm: 1px !default;
+$spacing-md: 3px !default;
+$spacing-lg: 20px !default;
+$spacing-xl: 27px !default;
+$spacing-xxl: 45px !default;
+$spacing-xxxl: 50px !default;
+$spacing-nav: 57px !default;
+
+// Variables de breakpoints
+$breakpoint-mobile: 768px !default;
+
+// Variables de bordures
+$border-radius: 8px !default;
+$border-width: 1px !default;
+
+// Variables de transitions
+$transition-duration: 0.25s !default;
