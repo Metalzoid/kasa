@@ -1,18 +1,32 @@
 import { createContext, useEffect, useState } from "react";
-import data from "../data/data.json";
+import { accommodationService } from "../services/accommodationService";
 
 const AccomodationContext = createContext();
 
 export const AccomodationProvider = ({ children }) => {
   const [accomodations, setAccomodations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const loadAccommodations = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      const data = await accommodationService.fetchAccommodations();
+      setAccomodations(data);
+    } catch (err) {
+      setError(err.message);
+      console.error("Erreur dans AccomodationContext:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    setAccomodations(data);
-    setLoading(false);
+    loadAccommodations();
   }, []);
 
-  // Fonction pour rechercher un hébergement par ID
   const findAccommodationById = (id) => {
     return accomodations.find((acc) => acc.id === id);
   };
@@ -22,6 +36,7 @@ export const AccomodationProvider = ({ children }) => {
       value={{
         accomodations,
         loading,
+        error,
         findAccommodationById,
       }}
     >

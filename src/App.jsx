@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router";
+import { useAccomodations } from "./hooks/useAccomodations.js";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  const context = useAccomodations();
+  window.debugContext = context;
   const [links, _setLinks] = useState([
     { to: "/", label: "Accueil" },
     { to: "/about", label: "A propos" },
