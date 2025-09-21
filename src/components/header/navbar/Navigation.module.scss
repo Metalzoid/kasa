@@ -17,9 +17,9 @@
       font-family: $font-family;
       text-decoration: none;
       color: $text-color;
-      font-size: $font-size-large;
+      font-size: clamp($font-size-small, 2.5vw, $font-size-large);
       font-weight: $font-weight-medium;
-      letter-spacing: $spacing-sm;
+      letter-spacing: clamp($spacing-xs, 0.5vw, $spacing-sm);
       line-height: $line-height-nav;
       text-wrap: nowrap;
 
@@ -27,11 +27,6 @@
         text-decoration: underline;
         text-underline-offset: $spacing-md;
         text-decoration-thickness: $spacing-sm;
-      }
-
-      @include mobile {
-        font-size: $font-size-small;
-        letter-spacing: $spacing-xs;
       }
     }
   }

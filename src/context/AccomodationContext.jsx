@@ -28,7 +28,11 @@ export const AccomodationProvider = ({ children }) => {
   }, []);
 
   const findAccommodationById = (id) => {
-    return accomodations.find((acc) => acc.id === id);
+    const result = accomodations.find((acc) => {
+      return acc.id === id;
+    });
+
+    return result;
   };
 
   return (

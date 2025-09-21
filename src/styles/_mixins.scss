@@ -7,6 +7,12 @@
   }
 }
 
+@mixin tablet {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
 // Mixin pour les transitions
 @mixin transition($property: all, $duration: $transition-duration) {
   transition: $property $duration;
