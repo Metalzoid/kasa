@@ -1,9 +1,9 @@
 import Header from "../components/header/Header";
 
-export default function NotFound(props) {
+export default function NotFound() {
   return (
     <>
-      <Header links={props.links} />
+      <Header />
       <h1>404</h1>
     </>
   );
