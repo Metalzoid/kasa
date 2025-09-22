@@ -28,6 +28,12 @@ $spacing-xxl: 45px !default;
 $spacing-xxxl: 50px !default;
 $spacing-nav: 57px !default;
 
+// Variables d'espacement responsive
+$spacing-mobile-min: 16px !default;
+$spacing-mobile-max: 20px !default;
+$spacing-desktop-min: 27px !default;
+$spacing-desktop-max: 50px !default;
+
 // Variables de breakpoints
 $breakpoint-mobile: 768px !default;
 $breakpoint-tablet: 1024px !default;

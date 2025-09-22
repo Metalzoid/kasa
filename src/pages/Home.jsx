@@ -1,8 +1,9 @@
+import { Link } from "react-router";
+import wallpaper2 from "../assets/images/wallpaper2.png";
+import Bottom from "../components/bottom/Bottom";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
-import wallpaper2 from "../assets/images/wallpaper2.png";
 import { useAccomodations } from "../hooks/useAccomodations";
-import { Link } from "react-router";
 
 export default function Home() {
   const { loading, accomodations } = useAccomodations();
@@ -23,8 +24,11 @@ export default function Home() {
         image={wallpaper2}
         brightness="40%"
       />
-      <h1>Home</h1>
-      <ul>{accomodationsList}</ul>
+      <main>
+        <h1>Home</h1>
+        <ul>{accomodationsList}</ul>
+      </main>
+      <Bottom />
     </>
   );
 }
