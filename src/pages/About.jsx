@@ -1,4 +1,5 @@
 import wallpaper1 from "../assets/images/wallpaper1.png";
+import Bottom from "../components/bottom/Bottom";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 
@@ -7,7 +8,10 @@ export default function About() {
     <>
       <Header />
       <Hero title="" image={wallpaper1} brightness="70%" />
-      <h1>About</h1>
+      <main>
+        <h1>About</h1>
+      </main>
+      <Bottom />
     </>
   );
 }

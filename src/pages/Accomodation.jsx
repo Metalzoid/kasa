@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import Bottom from "../components/bottom/Bottom";
 import Header from "../components/header/Header";
 import { useAccomodations } from "../hooks/useAccomodations";
 import NotFound from "./NotFound";
@@ -13,9 +14,12 @@ export default function Accomodation() {
     return (
       <>
         <Header />
-        <div className="loading-container">
-          <p>Chargement de l'hébergement...</p>
-        </div>
+        <main>
+          <div className="loading-container">
+            <p>Chargement de l'hébergement...</p>
+          </div>
+        </main>
+        <Bottom />
       </>
     );
   }
@@ -27,11 +31,14 @@ export default function Accomodation() {
   return (
     <>
       <Header />
-      <div className="accommodation-details">
-        <h1>{accommodation.title}</h1>
-        <p>ID: {accommodation.id}</p>
-        {/* Ajoutez ici les autres détails de l'accommodation */}
-      </div>
+      <main>
+        <div className="accommodation-details">
+          <h1>{accommodation.title}</h1>
+          <p>ID: {accommodation.id}</p>
+          {/* Ajoutez ici les autres détails de l'accommodation */}
+        </div>
+      </main>
+      <Bottom />
     </>
   );
 }

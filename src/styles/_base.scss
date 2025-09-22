@@ -30,17 +30,22 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 // Styles pour le conteneur principal
 #root {
   margin: 0 auto;
-  padding: $spacing-xxl $spacing-xxxl;
+  padding: clamp($spacing-mobile-max, 4vw, $spacing-xxl)
+    clamp($spacing-mobile-min, 5vw, $spacing-xxxl);
+  padding-bottom: 0;
   text-align: center;
-
-  @include mobile {
-    padding: $spacing-lg $spacing-xl;
-  }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100vw - 2 * clamp($spacing-mobile-min, 5vw, $spacing-xxxl));
+  width: 100%;
 }
 
 // Styles pour les titres
