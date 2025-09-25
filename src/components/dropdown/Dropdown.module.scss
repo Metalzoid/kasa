@@ -1,0 +1,21 @@
+.dropdown {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  cursor: pointer;
+  &__header {
+    border-radius: 5px;
+    background-color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 143%;
+      color: white;
+      margin: 0;
+    }
+  }
+}
