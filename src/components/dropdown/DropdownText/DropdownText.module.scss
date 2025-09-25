@@ -1,0 +1,25 @@
+.dropdownText {
+  padding: 0 10px 10px 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+  background-color: rgba(246, 246, 246, 0.45);
+
+  &__open {
+    max-height: 200px;
+    opacity: 1;
+    padding: 0 10px 10px 10px;
+  }
+
+  &__closed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 10px 0 10px;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 143%;
+  }
+}
