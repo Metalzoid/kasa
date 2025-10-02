@@ -1,0 +1,50 @@
+.accomodationsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 60px;
+  justify-content: space-around;
+  padding: 56px 20px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  margin: 43px 20px;
+
+  li {
+    list-style: none;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// Responsive design pour tablette
+@media (max-width: 1024px) {
+  .accomodationsList {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    gap: 40px 50px;
+    padding: 40px 30px;
+    margin: 30px 50px;
+  }
+}
+
+// Responsive design pour mobile
+@media (max-width: 768px) {
+  .accomodationsList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0;
+    background-color: transparent;
+    justify-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .accomodationsList {
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+  }
+}
