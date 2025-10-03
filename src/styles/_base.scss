@@ -85,6 +85,40 @@ li {
   margin: 50px 0;
 }
 
+.notFound {
+  &__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 143%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(255, 96, 96, 1);
+    margin: 0;
+  }
+  &__subtitle {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 143%;
+    vertical-align: bottom;
+    color: rgba(255, 96, 96, 1);
+    margin: 2rem;
+  }
+  &__link {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    vertical-align: bottom;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: black;
+    margin: 2rem;
+    display: inline-block;
+  }
+}
+
 // Media queries pour le mode clair
 @media (prefers-color-scheme: light) {
   :root {
