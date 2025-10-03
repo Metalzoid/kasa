@@ -1,12 +1,14 @@
 import { useContext } from "react";
-import { AboutItemsContext } from "../context/AboutItemsContext";
+import { DataContext } from "../context/DataContext";
 
 export const useAboutItems = () => {
-  const context = useContext(AboutItemsContext);
+  const context = useContext(DataContext);
   if (!context) {
-    throw new Error(
-      "useAboutItems must be used within an AboutItemsProvider"
-    );
+    throw new Error("useAboutItems must be used within a DataProvider");
   }
-  return context;
+  return {
+    aboutItems: context.aboutItems,
+    loading: context.aboutLoading,
+    error: context.aboutError,
+  };
 };

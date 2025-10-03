@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router";
+import { DataProvider } from "./context/DataContext";
 import About from "./pages/About";
 import Accomodation from "./pages/Accomodation";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import { AboutItemsProvider } from "./context/AboutItemsContext";
 
 function App() {
   return (
-    <AboutItemsProvider>
+    <DataProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/:id" element={<Accomodation />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </AboutItemsProvider>
+    </DataProvider>
   );
 }
 
