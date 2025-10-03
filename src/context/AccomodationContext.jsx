@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { accommodationService } from "../services/accommodationService";
+import { fetcher } from "../services/fetcher";
 
 const AccomodationContext = createContext();
 
@@ -13,7 +13,9 @@ export const AccomodationProvider = ({ children }) => {
       setLoading(true);
       setError(null);
 
-      const data = await accommodationService.fetchAccommodations();
+      const data = await fetcher.fetch(
+        "src/data/accomodations.json"
+      );
       setAccomodations(data);
     } catch (err) {
       setError(err.message);

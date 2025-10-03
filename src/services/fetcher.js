@@ -2,10 +2,10 @@
  * Service pour gérer les données d'hébergement
  * Centralise tous les appels de données liés aux accommodations
  */
-class AccommodationService {
-  async fetchAccommodations() {
+class Fetcher {
+  async fetch(url) {
     try {
-      const response = await fetch("/src/data/data.json");
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error(`Erreur: ${response.status} - ${response.statusText}`);
@@ -24,19 +24,6 @@ class AccommodationService {
       );
     }
   }
-
-  async fetchAccommodationById(id) {
-    try {
-      const accommodations = await this.fetchAccommodations();
-      return accommodations.find((acc) => acc.id === id) || null;
-    } catch (error) {
-      console.error(
-        `Erreur lors de la recherche de l'accommodation ${id}:`,
-        error
-      );
-      throw error;
-    }
-  }
 }
 
-export const accommodationService = new AccommodationService();
+export const fetcher = new Fetcher();
