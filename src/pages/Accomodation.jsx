@@ -3,6 +3,7 @@ import Bottom from "../components/bottom/Bottom";
 import Header from "../components/header/Header";
 import { useAccomodations } from "../hooks/useAccomodations";
 import NotFound from "./NotFound";
+import Carousel from "../components/carousel/Carousel";
 
 export default function Accomodation() {
   const { id } = useParams();
@@ -33,9 +34,10 @@ export default function Accomodation() {
       <Header />
       <main>
         <div className="accommodation-details">
-          <h1>{accommodation.title}</h1>
-          <p>ID: {accommodation.id}</p>
-          {/* Ajoutez ici les autres détails de l'accommodation */}
+          <Carousel
+            pictures={accommodation.pictures}
+            description={accommodation.description}
+          />
         </div>
       </main>
       <Bottom />
