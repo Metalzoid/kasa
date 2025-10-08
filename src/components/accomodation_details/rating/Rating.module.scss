@@ -1,0 +1,41 @@
+.rating {
+  display: flex;
+  gap: 2px;
+
+  &__star {
+    font-size: 25px;
+    line-height: 1;
+    position: relative;
+
+    &_full {
+      color: #ff6060;
+    }
+
+    &_partial {
+      color: #e3e3e3;
+
+      &::before {
+        content: "★";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #ff6060;
+        width: var(--fill-percentage);
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    &_empty {
+      color: #e3e3e3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rating {
+    &__star {
+      font-size: 15px;
+    }
+  }
+}
