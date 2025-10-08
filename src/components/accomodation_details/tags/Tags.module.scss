@@ -1,0 +1,15 @@
+@use "@/styles" as *;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .tag {
+    background-color: $primary-color;
+    color: $text-color-light;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+  }
+}

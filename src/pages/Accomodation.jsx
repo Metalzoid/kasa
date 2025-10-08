@@ -1,9 +1,10 @@
 import { useParams } from "react-router";
 import Bottom from "../components/bottom/Bottom";
+import Carousel from "../components/carousel/Carousel";
 import Header from "../components/header/Header";
 import { useAccomodations } from "../hooks/useAccomodations";
 import NotFound from "./NotFound";
-import Carousel from "../components/carousel/Carousel";
+import AccomodationDetails from "../components/accomodation_details/AccomodationDetails";
 
 export default function Accomodation() {
   const { id } = useParams();
@@ -33,11 +34,12 @@ export default function Accomodation() {
     <>
       <Header />
       <main>
-        <div className="accommodation-details">
+        <div>
           <Carousel
             pictures={accommodation.pictures}
             description={accommodation.description}
           />
+          <AccomodationDetails accomodation={accommodation} />
         </div>
       </main>
       <Bottom />

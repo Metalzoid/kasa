@@ -6,7 +6,7 @@
   height: clamp(255px, 33.47vw, 550px);
   overflow: hidden;
   border-radius: 25px;
-  margin: $spacing-xxl 0;
+  margin-top: $spacing-xxl;
 
   &__track {
     position: relative;
