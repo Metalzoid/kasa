@@ -1,6 +1,6 @@
 import Dropdown from "../dropdown/Dropdown";
 import styles from "./AccomodationDetails.module.scss";
-import HostInfos from "./hosftInfos/HostInfos";
+import HostInfos from "./hostInfos/HostInfos";
 import Rating from "./rating/Rating";
 import Tags from "./tags/Tags";
 
@@ -21,8 +21,8 @@ export default function AccomodationDetails({ accomodation }) {
         </div>
 
         <div className={styles.accomodationDetails__host}>
-          <HostInfos host={accomodation.host} />
           <Rating rating={accomodation.rating} />
+          <HostInfos host={accomodation.host} />
         </div>
       </div>
 

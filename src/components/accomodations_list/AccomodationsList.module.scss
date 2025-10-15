@@ -1,3 +1,5 @@
+@use "@/styles" as *;
+
 .accomodationsList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -56,7 +58,7 @@
 }
 
 // Responsive design pour tablette
-@media (max-width: 1024px) {
+@media (max-width: $breakpoint-tablet) {
   .accomodationsList {
     grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     gap: 40px 50px;
@@ -76,12 +78,12 @@
 }
 
 // Responsive design pour mobile
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-mobile) {
   .accomodationsList {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 20px;
-    margin: 0;
+    margin: 30px 0;
     background-color: transparent;
     justify-items: stretch;
   }
@@ -98,10 +100,10 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-small-mobile) {
   .accomodationsList {
     padding: 0;
-    margin: 0;
+    margin: 30px 0;
     gap: 15px;
   }
 

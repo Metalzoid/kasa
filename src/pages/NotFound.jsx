@@ -1,12 +1,12 @@
-import { Link } from "react-router";
 import Bottom from "@/components/bottom/Bottom";
 import Header from "@/components/header/Header";
+import { Link } from "react-router";
 
 export default function NotFound() {
   return (
     <>
       <Header />
-      <main>
+      <main className="notFound">
         <h1 className="notFound__title">404</h1>
         <h6 className="notFound__subtitle">
           Oups! La page que vous demandez n'existe pas.

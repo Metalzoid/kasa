@@ -19,6 +19,10 @@
     font-weight: $font-weight-medium;
     color: $primary-color;
     margin: 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 12px;
+    }
   }
 
   &__picture {
@@ -26,5 +30,10 @@
     height: 64px;
     border-radius: 50%;
     object-fit: cover;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 32px;
+      height: 32px;
+    }
   }
 }
