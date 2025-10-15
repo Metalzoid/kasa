@@ -1,3 +1,5 @@
+@use "@/styles" as *;
+
 .rating {
   display: flex;
   gap: 2px;
@@ -32,10 +34,12 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-mobile) {
   .rating {
+    gap: 1px;
+
     &__star {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
 }

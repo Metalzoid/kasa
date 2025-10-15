@@ -3,6 +3,7 @@ import styles from "./Carousel.module.scss";
 
 export default function Carousel({ pictures, description }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [resetTimer, setResetTimer] = useState(0);
 
   const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
@@ -14,12 +15,22 @@ export default function Carousel({ pictures, description }) {
     );
   };
 
+  const handleManualNext = () => {
+    handleNext();
+    setResetTimer((prev) => prev + 1);
+  };
+
+  const handleManualPrevious = () => {
+    handlePrevious();
+    setResetTimer((prev) => prev + 1);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
-  }, [handleNext]);
+  }, [handleNext, resetTimer]);
 
   const showControls = pictures.length > 1;
 
@@ -41,13 +52,13 @@ export default function Carousel({ pictures, description }) {
       {showControls && (
         <>
           <button
-            onClick={handlePrevious}
+            onClick={handleManualPrevious}
             className={styles.carousel__button__previous}
             aria-label="Image précédente"
           >
             <svg
-              width="120"
-              height="120"
+              width="100%"
+              height="100%"
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -57,13 +68,13 @@ export default function Carousel({ pictures, description }) {
           </button>
 
           <button
-            onClick={handleNext}
+            onClick={handleManualNext}
             className={styles.carousel__button__next}
             aria-label="Image suivante"
           >
             <svg
-              width="120"
-              height="120"
+              width="100%"
+              height="100%"
               viewBox="0 0 48 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

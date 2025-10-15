@@ -1,3 +1,5 @@
+@use "@/styles" as *;
+
 .accomodationCard {
   position: relative;
   width: 100%;
@@ -51,7 +53,7 @@
 }
 
 // Responsive design pour mobile
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-mobile) {
   .accomodationCard {
     width: 100%;
     max-width: 100%;
@@ -74,7 +76,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-small-mobile) {
   .accomodationCard {
     height: auto;
 

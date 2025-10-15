@@ -1,8 +1,13 @@
 @use "@/styles" as *;
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+
+  @media (max-width: $breakpoint-mobile) {
+    gap: 5px;
+  }
 
   .tag {
     background-color: $primary-color;
@@ -11,5 +16,11 @@
     border-radius: 10px;
     font-size: 14px;
     font-weight: $font-weight-medium;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 10px;
+    }
   }
 }
