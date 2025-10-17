@@ -23,7 +23,7 @@ export default function AccomodationsList() {
   }
 
   return (
-    <div className={styles.accomodationsList}>
+    <ul className={styles.accomodationsList}>
       {accomodations.map((accomodation) => (
         <li key={accomodation.id}>
           <Link to={`/${accomodation.id}`}>
@@ -31,6 +31,6 @@ export default function AccomodationsList() {
           </Link>
         </li>
       ))}
-    </div>
+    </ul>
   );
 }

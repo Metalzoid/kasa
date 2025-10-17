@@ -57,7 +57,7 @@
   .accomodationCard {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 255px;
     border-radius: 10px;
 
     .titleOverlay {
@@ -78,7 +78,7 @@
 
 @media (max-width: $breakpoint-small-mobile) {
   .accomodationCard {
-    height: auto;
+    height: 200px;
 
     .titleOverlay {
       padding: 12px 8px 8px 8px;
