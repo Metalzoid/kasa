@@ -19,7 +19,7 @@
   }
 
   &__content {
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
     font-weight: 500;
     line-height: 143%;
     text-align: left;

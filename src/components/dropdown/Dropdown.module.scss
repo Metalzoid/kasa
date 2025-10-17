@@ -11,7 +11,7 @@
     align-items: center;
     padding: 10px 20px 10px 10px;
     &__title {
-      font-size: 18px;
+      font-size: clamp(14px, 1.5vw, 18px);
       font-weight: 700;
       line-height: 143%;
       color: white;
